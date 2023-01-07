@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+<<<<<<< HEAD
 function App() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
@@ -32,8 +33,14 @@ function App() {
   const onClick = (event) => {
     setConverted((price * 1250) / value);
   };
+=======
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+>>>>>>> MA-FE-Routing
 
+function App() {
   return (
+<<<<<<< HEAD
     <div>
       <h1>The Coins! {loading ? "" : `(${coins.length})`}</h1>
       {loading ? (
@@ -67,6 +74,14 @@ function App() {
         </strong>
       </div>
     </div>
+=======
+    <Router>
+      <Routes>
+        <Route path="/movie" element={<Detail />}></Route>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </Router>
+>>>>>>> MA-FE-Routing
   );
 }
 
